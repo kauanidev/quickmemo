@@ -10,7 +10,7 @@ export const Button = ({ children, className, ...props }: ButtonProps) => {
     <button
       {...props}
       className={clsx(
-        "bg-surface p-2.5 rounded-lg hover:bg-brand transition-colors hover:text-background [&.active]:bg-brand [&.active]:text-background",
+        "cursor-pointer bg-surface p-2.5 rounded-lg hover:bg-brand transition-colors hover:text-background [&.active]:bg-brand [&.active]:text-background",
         className
       )}
     >
