@@ -1,5 +1,5 @@
-import { persist } from "zustand/middleware";
-import { create } from "zustand";
+import { persist, PersistOptions } from "zustand/middleware";
+import { create, StateCreator } from "zustand";
 
 export type INote = {
   title: string;
@@ -19,8 +19,13 @@ type Store = {
   deleteNote: (id: string) => void;
 };
 
+type MyPersist = (
+  config: StateCreator<Store>,
+  options: PersistOptions<Store, Partial<Store>>
+) => StateCreator<Store>;
+
 export const useNotes = create<Store>(
-  persist(
+  (persist as MyPersist)(
     (set) => ({
       notes: [],
       editingNote: null,
