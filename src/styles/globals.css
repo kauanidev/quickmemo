@@ -4,6 +4,18 @@
 
 @layer base {
   body {
-    @apply bg-background min-h-screen text-text;
+    @apply bg-background text-text;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[6px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand rounded-full;
   }
 }

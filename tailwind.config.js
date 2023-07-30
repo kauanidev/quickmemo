@@ -17,14 +17,6 @@ module.exports = {
           secondary: "#838383",
         },
         surface: "#3B3B3B",
-        pastel: {
-          yellow: "#FBEDCC",
-          green: "#C9E4DE",
-          blue: "#C6DEF1",
-          purple: "#DBCDF0",
-          pink: "#F2C6DE",
-          orange: "#F8D9C4",
-        },
         brand: "#F8C342",
       },
       typography: {
